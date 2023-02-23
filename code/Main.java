@@ -1,3 +1,6 @@
+/**
+ * Diego Vásquez - 211628
+ */
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -11,12 +14,13 @@ public class Main {
     
      public static void main(String[] args) throws IOException{
         
+        Lector lc = new Lector();
+        
         
         Scanner scan = new Scanner(System.in);
-        System.out.println("Ingrese la ruta de acceso del archivo Postfix:");
+        System.out.println("Ingrese la ruta de acceso del archivo Infix:");
         String direction = scan.nextLine();
-        ArrayList<String> operations = new ArrayList<>();
-        
+        ArrayList<String> operations = new ArrayList<>();        
         
         try { //verificar la existencia del archivo
             BufferedReader bf = new BufferedReader(new FileReader (direction));
@@ -34,6 +38,17 @@ public class Main {
         catch(FileNotFoundException f){
             System.out.println("No se encontró el archivo");
             System.exit(0);
+        }
+
+        for (int i = 0; i < operations.size(); i++) {
+            switch (operations.get(i)) {
+                case "(":
+                    
+                    break;
+            
+                default:
+                    break;
+            }
         }
 
     }

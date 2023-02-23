@@ -1,3 +1,6 @@
+/**
+ * Diego Vásquez - 211628
+ */
 
 public interface IStack<T> 
 {
@@ -10,5 +13,8 @@ public interface IStack<T>
    public boolean empty();
    
    public int size();
+
+   public T pop();
+      
 
 }

@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 public class Lector {
     private Stack st = new Stack<Integer>();
+
     private Calcu calc = new Calcu();
     
     //Evalua los posibles errores de sintaxis y verifica que existan signos en la expresión.
@@ -20,7 +21,7 @@ public class Lector {
     for(int n = 0; n <line.length(); n ++){
         char c = line.charAt(n);
         switch(c){
-            case '+' ->{
+            case '+':{
                 ArrayList<Integer> in = NumbersGetter();
                 String R = calc.add(in);
                 if(R.equals("f")){
@@ -31,7 +32,7 @@ public class Lector {
                     valid = true;
                 }
             }
-            case '-' ->{
+            case '-':{
                 ArrayList<Integer> in = NumbersGetter();
                 String R = calc.Substraction(in);
                 if(R.equals("f")){
@@ -43,7 +44,7 @@ public class Lector {
                     valid = true;
                 }
             }
-            case '/'->{
+            case '/':{
                 ArrayList<Integer> in = NumbersGetter();
                 String R = calc.Divition(in);
                 if(R.equals("f")){
@@ -54,7 +55,7 @@ public class Lector {
                 }
 
             }
-            case '*'-> {
+            case '*':{
                 ArrayList<Integer> in = NumbersGetter();
                 String R = calc.Multiply(in);
                 if(R.equals("f")){
@@ -66,7 +67,7 @@ public class Lector {
                     
                 }
             }
-            default->{ //Verificacion de que sea un número.
+            default:{ //Verificacion de que sea un número.
                 boolean number_check = Character.isDigit(c);
                 if(number_check){
                     String c_string = String.valueOf(c);

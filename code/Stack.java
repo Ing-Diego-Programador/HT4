@@ -1,3 +1,6 @@
+/**
+ * Diego Vásquez - 211628
+ */
 
 import java.util.ArrayList;
 
@@ -12,13 +15,13 @@ public class Stack<T> implements IStack<T> {
     //regresa el valor de la cima y lo elimina del array.
     @Override
     public T pull() {
-            return data.remove(data.size()-1);
+        return data.remove(data.size()-1);
     }
 
     //muestra el  valor de la cima .
     @Override
     public T peek() {
-         return data.remove(data.size()-1);
+        return data.remove(data.size()-1);
     }
 
     //true si esta vacia.
@@ -31,6 +34,12 @@ public class Stack<T> implements IStack<T> {
     @Override
     public int size() {
        return data.size();
+    }
+
+    @Override
+    public T pop() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'pop'");
     }
     
 }
